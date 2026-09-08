@@ -1,4 +1,4 @@
-import { shedulesDay } from './shedules/load.js'
+import { shedulesDay } from './schedules/load.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   shedulesDay()

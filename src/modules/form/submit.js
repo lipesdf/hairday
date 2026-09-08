@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
 
 const form = document.querySelector('form');
+const clienteName = document.getElementById("client")
 const selectDate = document.getElementById('date');
 
 // Data atual para o impute
@@ -17,6 +18,34 @@ form.onsubmit = async (event) => {
   // Previne o comportamento padrão do formulário de enviar os dados e recarregar a página
   event.preventDefault();
 
-  console.log(selectDate.value);
-  console.log('Formulário enviado!');
+  try{
+    // Recuperando o nome do cliente
+    const name = clienteName.value.trim()
+
+    if (!name){
+      return alert("Informe o nome do cliente!")
+    }
+
+    // Recuperar o horário selecionado.
+    const hourSelected = document.querySelector(".hour-selected")
+    
+    if(!hourSelected){
+      return alert("Selecione a hora.")
+    }
+
+    // Recupera somente a hora
+    const [hour] = hourSelected.innerText.split(":")
+
+    // Insere a hora na data
+    const when = dayjs(selectDate.value).add(hour,"hour")
+
+    // Gera um ID
+    const id = new Date().getTime()
+
+    console.log(when, id, name)
+
+  } catch(error){
+    alert("Não foi possível realizar o agendamento.")
+    console.log(error)
+  }
 }
