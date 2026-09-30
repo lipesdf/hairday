@@ -80,8 +80,6 @@ Em outro terminal, execute o projeto utilizando o comando configurado no `packag
 
 <img width="1916" height="916" alt="image" src="https://github.com/user-attachments/assets/1785421f-97c2-4a46-8aa2-b4c264286a3c" />
 
-> 📌 Adicione aqui prints reais da aplicação para deixar o projeto mais atrativo no GitHub.
-
 ## Conhecimentos adquirido
 
 Durante o desenvolvimento do HairDay, pude praticar conceitos importantes de desenvolvimento web, como:
